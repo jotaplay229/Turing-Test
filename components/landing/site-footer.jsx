@@ -2,6 +2,7 @@
 import { siteConfig } from '../../lib/site-config.js';
 import { Logo, SmoothAnchor, Destination, SocialLinks } from './site-links.jsx';
 export function SiteFooter({ onUnavailable }) {
+  const [emailName, emailDomain] = siteConfig.contact.email.split('@');
   return (
     <footer className="site-footer">
       <div className="footer-inner">
@@ -18,7 +19,8 @@ export function SiteFooter({ onUnavailable }) {
             onUnavailable={onUnavailable}
             className="footer-email"
           >
-            {siteConfig.contact.email}
+            {emailName}
+            <wbr />@{emailDomain}
           </Destination>
           <SocialLinks onUnavailable={onUnavailable} />
         </div>
