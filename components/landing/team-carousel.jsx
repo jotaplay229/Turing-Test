@@ -2,10 +2,10 @@
 import { useEffect, useRef, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { getCarouselInterval } from '@/lib/site-config';
-import { members } from '@/lib/team-data';
-import { startCarouselAutoplay } from '@/lib/page-motion';
-import { MemberCard } from './member-card';
+import { getCarouselInterval } from '../../lib/site-config.js';
+import { members } from '../../lib/team-data.js';
+import { startCarouselAutoplay } from '../../lib/page-motion.js';
+import { MemberCard } from './member-card.jsx';
 /** Uma única faixa: presidência, diretores e suas equipes, na ordem do cadastro. */
 export function TeamCarousel({ onUnavailable }) {
   const [viewportRef, carousel] = useEmblaCarousel({

@@ -1,7 +1,7 @@
 'use client';
 import { Tabs as TabsPrimitive } from '@base-ui/react/tabs';
 import { cva } from 'class-variance-authority';
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils.js';
 function Tabs({ className, orientation = 'horizontal', ...props }) {
   return (
     <TabsPrimitive.Root

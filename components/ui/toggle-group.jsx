@@ -2,8 +2,8 @@
 import * as React from 'react';
 import { Toggle as TogglePrimitive } from '@base-ui/react/toggle';
 import { ToggleGroup as ToggleGroupPrimitive } from '@base-ui/react/toggle-group';
-import { cn } from '@/lib/utils';
-import { toggleVariants } from '@/components/ui/toggle';
+import { cn } from '../../lib/utils.js';
+import { toggleVariants } from './toggle.jsx';
 const ToggleGroupContext = React.createContext({
   size: 'default',
   variant: 'default',

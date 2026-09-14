@@ -1,8 +1,8 @@
 'use client';
-import { Github, Instagram, Linkedin } from '@/components/social-icons';
-import { scrollToSection } from '@/lib/page-motion';
-import { siteConfig } from '@/lib/site-config';
-import { getSocialHref } from '@/lib/social-links';
+import { Github, Instagram, Linkedin } from '../social-icons.jsx';
+import { scrollToSection } from '../../lib/page-motion.js';
+import { siteConfig } from '../../lib/site-config.js';
+import { getSocialHref } from '../../lib/social-links.js';
 export function Logo({ inverse = false }) {
   const source = inverse ? siteConfig.logoInverse : siteConfig.logo;
   return (

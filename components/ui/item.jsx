@@ -2,8 +2,8 @@ import * as React from 'react';
 import { mergeProps } from '@base-ui/react/merge-props';
 import { useRender } from '@base-ui/react/use-render';
 import { cva } from 'class-variance-authority';
-import { cn } from '@/lib/utils';
-import { Separator } from '@/components/ui/separator';
+import { cn } from '../../lib/utils.js';
+import { Separator } from './separator.jsx';
 function ItemGroup({ className, ...props }) {
   return (
     <div

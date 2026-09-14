@@ -6,9 +6,9 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select';
-import { courses, roles, siteConfig } from '@/lib/site-config';
-import { ApplicationError, sendApplication } from '@/lib/applications';
+} from '../ui/select.jsx';
+import { courses, roles, siteConfig } from '../../lib/site-config.js';
+import { ApplicationError, sendApplication } from '../../lib/applications.js';
 export function ApplicationForm() {
   const [course, setCourse] = useState(null);
   const [area, setArea] = useState(null);

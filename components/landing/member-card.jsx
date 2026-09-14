@@ -1,5 +1,5 @@
 'use client';
-import { SocialLinks } from './site-links';
+import { SocialLinks } from './site-links.jsx';
 export function MemberCard({ member, onUnavailable }) {
   const focus = member.photoFocus ?? {
     x: 50,

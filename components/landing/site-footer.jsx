@@ -1,6 +1,6 @@
 'use client';
-import { siteConfig } from '@/lib/site-config';
-import { Logo, SmoothAnchor, Destination, SocialLinks } from './site-links';
+import { siteConfig } from '../../lib/site-config.js';
+import { Logo, SmoothAnchor, Destination, SocialLinks } from './site-links.jsx';
 export function SiteFooter({ onUnavailable }) {
   return (
     <footer className="site-footer">

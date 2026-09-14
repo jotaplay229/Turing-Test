@@ -1,9 +1,9 @@
 'use client';
 import { Globe, CodeXml, MessagesSquare } from 'lucide-react';
-import { getContactHref, projects, siteConfig } from '@/lib/site-config';
-import { SmoothAnchor, Destination } from './site-links';
-import { TeamCarousel } from './team-carousel';
-import { ApplicationForm } from './application-form';
+import { getContactHref, projects, siteConfig } from '../../lib/site-config.js';
+import { SmoothAnchor, Destination } from './site-links.jsx';
+import { TeamCarousel } from './team-carousel.jsx';
+import { ApplicationForm } from './application-form.jsx';
 export function HeroSection({ onUnavailable }) {
   return (
     <section className="hero" id="inicio" aria-labelledby="hero-title">

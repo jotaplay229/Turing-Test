@@ -1,8 +1,8 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { getContactHref } from '@/lib/site-config';
-import { Logo, SmoothAnchor, Destination } from './site-links';
+import { getContactHref } from '../../lib/site-config.js';
+import { Logo, SmoothAnchor, Destination } from './site-links.jsx';
 const navigation = [
   { href: '#servicos', label: 'Serviços' },
   { href: '#sobre', label: 'Sobre Nós' },

@@ -6,11 +6,11 @@ import {
   DialogContent,
   DialogDescription,
   DialogTitle,
-} from '@/components/ui/dialog';
-import { useScrollReveal } from '@/hooks/use-scroll-reveal';
-import { cancelSectionScroll } from '@/lib/page-motion';
-import { SiteHeader } from './landing/site-header';
-import { SiteFooter } from './landing/site-footer';
+} from './ui/dialog.jsx';
+import { useScrollReveal } from '../hooks/use-scroll-reveal.js';
+import { cancelSectionScroll } from '../lib/page-motion.js';
+import { SiteHeader } from './landing/site-header.jsx';
+import { SiteFooter } from './landing/site-footer.jsx';
 import {
   HeroSection,
   ServicesSection,
@@ -18,7 +18,7 @@ import {
   PortfolioSection,
   RecruitmentSection,
   ApplicationSection,
-} from './landing/page-sections';
+} from './landing/page-sections.jsx';
 /** Composição da página. Conteúdo, interações e integração ficam em arquivos próprios. */
 export function LandingPage() {
   const [unavailable, setUnavailable] = useState(false);
