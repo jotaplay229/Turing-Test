@@ -55,6 +55,14 @@ export function TeamCarousel({ onUnavailable }) {
         document.hidden || Boolean(document.querySelector('[role="dialog"]')),
     );
   }, [carousel, interval, focused, paused, inView]);
+  // Antecipa as duas próximas fotos e a anterior, inclusive na volta da faixa.
+  const imagesToPreload = new Set(
+    visibleSlides.flatMap((index) =>
+      [-1, 0, 1, 2].map(
+        (offset) => (index + offset + members.length) % members.length,
+      ),
+    ),
+  );
   return (
     <div className="team-section" id="membros" data-reveal>
       <h3 id="team-title">Conheça quem faz acontecer</h3>
@@ -106,7 +114,11 @@ export function TeamCarousel({ onUnavailable }) {
                 aria-hidden={!visibleSlides.includes(index)}
                 inert={!visibleSlides.includes(index)}
               >
-                <MemberCard member={member} onUnavailable={onUnavailable} />
+                <MemberCard
+                  member={member}
+                  onUnavailable={onUnavailable}
+                  preload={imagesToPreload.has(index)}
+                />
               </div>
             ))}
           </div>

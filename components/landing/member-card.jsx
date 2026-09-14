@@ -1,6 +1,6 @@
 'use client';
 import { SocialLinks } from './site-links.jsx';
-export function MemberCard({ member, onUnavailable }) {
+export function MemberCard({ member, onUnavailable, preload = false }) {
   const focus = member.photoFocus ?? {
     x: 50,
     y: 50,
@@ -21,7 +21,8 @@ export function MemberCard({ member, onUnavailable }) {
             className="member-photo-image"
             src={member.image}
             alt={member.name}
-            loading="lazy"
+            loading={preload ? 'eager' : 'lazy'}
+            fetchPriority="low"
             decoding="async"
             style={{
               width: `${100 * Math.max(1, focus.aspectRatio) * focus.zoom}%`,

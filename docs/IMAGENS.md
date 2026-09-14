@@ -1,5 +1,13 @@
 # Imagens do site
 
+## Versões usadas na página
+
+O site usa as cópias WebP em `public/images/optimized/membros` e `public/images/optimized/projetos`. As 17 fotos e as duas logos do portfólio somam aproximadamente **369 KB**, contra **10,65 MB** dos arquivos de origem (96,5% de redução). As marcas da Turing continuam usando seus PNGs originais com transparência.
+
+As fotos têm até 512 pixels no lado maior, sem ampliação, com qualidade WebP 84. A foto de Aristides tem 768 pixels e qualidade 85 para manter a nitidez no enquadramento com zoom. A orientação EXIF foi aplicada aos pixels antes de exportar; os enquadramentos continuam no CSS. A SOMA usa 960 × 320 pixels com qualidade 90; o COVOL usa compressão sem perdas, nos 256 × 112 pixels originais.
+
+O carrossel antecipa as fotos visíveis, as duas seguintes e a anterior. As demais usam carregamento adiado (`loading="lazy"`). Ao trocar uma imagem, gere sua versão WebP, atualize `image` em `lib/team-data.js` ou `lib/site-config.js` e confira o enquadramento. Guarde o original para futuras alterações.
+
 ## Equipe
 
 As 17 fotos ficam em `public/images/membros`. Os arquivos originais foram preservados. As 14 fotos da pasta de respostas do formulário foram associadas pelos nomes dos arquivos; Pedro Augusto, Francisco e Wellington usam os anexos enviados na conversa. Os enquadramentos ficam em `photoFocus`, no cadastro `lib/team-data.js`, sem recortar ou modificar os arquivos.
@@ -8,7 +16,7 @@ As 17 fotos ficam em `public/images/membros`. Os arquivos originais foram preser
 
 - `public/images/projetos/covol-19.jpg`: logo original de 256 × 112 pixels do [repositório da Turing](https://github.com/Turing-Tecnologia/COVOL-19/blob/master/public/logo.jpg). A apresentação limita a largura para evitar ampliar desnecessariamente uma imagem pequena.
 - `public/images/projetos/soma-reference.jpg`: captura de referência de 872 × 552 pixels, também disponível no [site anterior da Turing](https://turing.netlify.app/assets/img/portfolio/soma.jpg).
-- `public/images/projetos/soma-logo.png`: versão de 2172 × 724 pixels melhorada com a ferramenta integrada `image_gen`, a partir da captura enviada. É uma reconstrução da imagem raster, não um arquivo vetorial oficial. Usa fundo azul-marinho para combinar com o cartão. Se a empresa disponibilizar o arquivo original da marca, substitua este PNG e mantenha o caminho configurado.
+- `public/images/projetos/soma-logo.png`: versão de 2172 × 724 pixels melhorada com a ferramenta integrada `image_gen`, a partir da captura enviada. É uma reconstrução da imagem raster, não um arquivo vetorial oficial. Usa fundo azul-marinho para combinar com o cartão. Se a empresa disponibilizar o arquivo original da marca, guarde o arquivo original, gere uma nova versão WebP e atualize o caminho configurado se necessário.
 
 Prompt inicial usado na ferramenta integrada:
 
